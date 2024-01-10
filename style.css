@@ -7,11 +7,64 @@ body {
   display: grid;
 
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .header {
   grid-column: 2 / 3;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 2fr 3fr;
+}
+
+.header .search {
+  grid-column: 1 / 4;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  align-items: center;
+}
+
+.header .search .search-icon {
+  padding-right: 6px;
+  text-align: right;
+}
+
+.header .search input[type="search"] {
+  grid-column: 2 / 7;
+
+  height: 45%;
+
+  border: 1px solid gray;
+  border-radius: 8px;
+
+  position: relative;
+}
+
+.header .options {
+  grid-column: 5 / 7;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 3fr;
+
+  align-items: center;
+}
+
+.header .options .bell-icon {
+  text-align: center;
+
+  grid-column: 1 / 2;
+}
+
+.header .user-welcome {
+  grid-column: 1 / 4;
+}
+
+.header .user-actions {
+  grid-column: 4 / 7;
 }
 
 .sidebar {
